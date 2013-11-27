@@ -6,16 +6,16 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import java.util.Date;
 
 public class GpsActivity extends Activity {
-    public TextView latView, lngView, addressView;
+    public EditText addressEdit;
     public LocationManager lm;
     public LocationListener ll;
-    public long lastRequest;
+    public long lastRequest = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,7 @@ public class GpsActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        latView = (TextView) findViewById(R.id.latView);
-        lngView = (TextView) findViewById(R.id.lngView);
-        addressView = (TextView) findViewById(R.id.addressView);
+        addressEdit = (EditText) findViewById(R.id.editAddress);
     }
 
     @Override
@@ -52,8 +50,6 @@ public class GpsActivity extends Activity {
     }
 
     public void updateLocation(Location location) {
-        latView.setText(Double.toString(location.getLatitude()));
-        lngView.setText(Double.toString(location.getLongitude()));
         if (lastRequest == 0 || (new Date().getTime() - lastRequest) > 60) {
             lastRequest = new Date().getTime();
             AddressFinder.findAddress(this, location);
@@ -64,13 +60,13 @@ public class GpsActivity extends Activity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                addressView.setText(address);
+                addressEdit.setText(address);
             }
         });
     }
 
     public void updateAddressFailed(final String message) {
-        runOnUiThread( new Runnable() {
+        runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 Context context = getApplicationContext();

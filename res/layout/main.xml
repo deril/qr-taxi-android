@@ -1,28 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right|left">
+
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Hello World, GpsActivity"
-            />
+            android:id="@+id/textView"/>
+
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Lat:"
-            android:id="@+id/latView" android:layout_gravity="left|center_vertical"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lng"
-            android:id="@+id/lngView" android:layout_gravity="left|center_vertical"/>
+            android:text="From"
+            android:singleLine="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textViewFrom"/>
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewFrom"
+            android:id="@+id/view"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Address"
-            android:id="@+id/addressView" android:layout_gravity="left|center_vertical"/>
-</LinearLayout>
+            android:id="@+id/addressView"
+            android:layout_gravity="left|center_vertical"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignBaseline="@+id/editAddress"/>
+
+    <EditText
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:text="put your address here"
+            android:id="@+id/editAddress"
+            android:layout_alignRight="@+id/textView"
+            android:layout_below="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="72dp"
+            android:checked="false"
+            android:inputType="text"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reference"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_below="@+id/editAddress"
+            android:id="@+id/textViewReference"/>
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewReference"
+            android:id="@+id/view1"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i.e. in front of supermarket"
+            android:id="@+id/editTextReference"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_below="@+id/view1"
+            android:layout_alignRight="@+id/textView"
+            android:inputType="text"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To (optional)"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_below="@+id/editTextReference"
+            android:id="@+id/textViewTo"/>
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewTo"
+            android:id="@+id/view2"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="for cost calculation"
+            android:id="@+id/editTextTo"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_below="@+id/view2"
+            android:layout_alignRight="@+id/textView"
+            android:inputType="text"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:id="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="241dp"/>
+
+</RelativeLayout>
 
