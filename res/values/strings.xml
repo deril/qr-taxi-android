@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">qr-taxi</string>
+    <string name="fromTextView">From</string>
+    <string name="addressTextView">Address</string>
+    <string name="addressEditView">put your address here</string>
+    <string name="referenceTextView">Reference</string>
+    <string name="referenceEditText">i.e. in front of supermarket</string>
+    <string name="toTextView">To (optional)</string>
+    <string name="toEditText">for cost calculation</string>
 </resources>

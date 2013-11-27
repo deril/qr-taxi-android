@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">qr-taxi</string>
+    <string name="fromTextView">Откуда</string>
+    <string name="addressTextView">Адресс</string>
+    <string name="addressEditView">ваш адрес здесь</string>
+    <string name="referenceTextView">Уточнения</string>
+    <string name="referenceEditText">например: напротив магазина</string>
+    <string name="toTextView">Куда (опционально)</string>
+    <string name="toEditText">для расчета стоимости</string>
+</resources>
