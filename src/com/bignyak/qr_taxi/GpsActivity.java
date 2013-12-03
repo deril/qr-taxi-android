@@ -6,6 +6,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -74,5 +75,10 @@ public class GpsActivity extends Activity {
                 Toast.makeText(context, message, duration).show();
             }
         });
+    }
+
+    public void getAddressManual(View view) {
+        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        updateLocation(location);
     }
 }

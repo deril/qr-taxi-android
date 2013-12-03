@@ -8,4 +8,5 @@
     <string name="referenceEditText">i.e. in front of supermarket</string>
     <string name="toTextView">To (optional)</string>
     <string name="toEditText">for cost calculation</string>
+    <string name="get_address">Get address</string>
 </resources>

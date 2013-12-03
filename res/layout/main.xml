@@ -39,11 +39,10 @@
             android:layout_alignBaseline="@+id/editAddress"/>
 
     <EditText
-            android:layout_width="168dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="@string/addressEditView"
+            android:hint="@string/addressEditView"
             android:id="@+id/editAddress"
-            android:layout_alignRight="@+id/textView"
             android:layout_below="@+id/view"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="72dp"
@@ -69,7 +68,7 @@
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/referenceEditText"
+            android:hint="@string/referenceEditText"
             android:id="@+id/editTextReference"
             android:layout_alignLeft="@+id/textView"
             android:layout_below="@+id/view1"
@@ -95,7 +94,7 @@
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/toEditText"
+            android:hint="@string/toEditText"
             android:id="@+id/editTextTo"
             android:layout_alignLeft="@+id/textView"
             android:layout_below="@+id/view2"
@@ -110,6 +109,16 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="241dp"/>
+    <ImageButton
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:id="@+id/buttonUpdateAddress"
+            android:onClick="getAddressManual"
+            android:layout_alignRight="@+id/textView" android:layout_below="@+id/view"
+            android:layout_toRightOf="@+id/editAddress" android:layout_alignBottom="@+id/editAddress"
+            android:src="@android:drawable/stat_notify_sync" android:baselineAlignBottom="true"
+            android:background="@android:color/background_dark" android:clickable="true" android:cropToPadding="false"
+            android:focusable="false" android:contentDescription="@string/get_address"/>
 
 </RelativeLayout>
 

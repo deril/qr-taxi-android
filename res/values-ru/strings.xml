@@ -8,4 +8,5 @@
     <string name="referenceEditText">например: напротив магазина</string>
     <string name="toTextView">Куда (опционально)</string>
     <string name="toEditText">для расчета стоимости</string>
+    <string name="get_address">Получить адрес</string>
 </resources>
